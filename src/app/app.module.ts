@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { FormDdComponent } from './form-dd/form-dd.component';
 
 import { StorageService } from './storage-service.service';
+import { DisplayComponent } from './display/display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormDdComponent
+    FormDdComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
