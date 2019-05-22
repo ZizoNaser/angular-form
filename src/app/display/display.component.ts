@@ -8,7 +8,7 @@ import {StorageService} from 'app/storage-service.service';
 })
 export class DisplayComponent implements OnInit {
 
-  
+  data:any = {};
   objectKeys = Object.keys;
   
   constructor(private storageService : StorageService) { }
