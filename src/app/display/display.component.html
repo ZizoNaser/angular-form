@@ -7,11 +7,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let key of objectKeys(data)" >
+          <tr *ngFor="let key of objectKeys(data)"  >
               <td >{{key}}</td>
               <td>{{data[key]}}</td>
           </tr>          
           
         </tbody>
       </table>
+
+      <a [routerLink]="['']"><button type="button" class="btn btn-outline-dark">Back</button></a>
 </div>

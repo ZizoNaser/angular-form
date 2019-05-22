@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import {StorageService} from 'app/storage-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'af-form',
@@ -15,7 +16,7 @@ export class FormDdComponent implements OnInit {
 
   myForm: FormGroup;
 
-  constructor(private storageService : StorageService) { }
+  constructor(private storageService : StorageService, private router :Router) { }
 
   ngOnInit() {
     this.myForm = new FormGroup({
@@ -33,6 +34,7 @@ export class FormDdComponent implements OnInit {
 
   onSubmit(){
     this.storageService.save(this.myForm.value);
+    this.router.navigate(['/disply']);
   }
 
 }
