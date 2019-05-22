@@ -1,9 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-  <a class="navbar-brand" href="/">Form</a>
+  <a class="navbar-brand" [routerLink]="['']">Form</a>
 </nav>
 <div class="container p-5">
   <div class="row">
-    <!-- <af-form></af-form> -->
-    <af-display></af-display>
+    <router-outlet></router-outlet>
   </div>
 </div>

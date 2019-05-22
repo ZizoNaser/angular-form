@@ -11,7 +11,9 @@ export class DisplayComponent implements OnInit {
   data:any = {};
   objectKeys = Object.keys;
   
-  constructor(private storageService : StorageService) { }
+  constructor(private storageService : StorageService) { 
+    
+  }
 
   ngOnInit() {
    this.data = this.storageService.load;

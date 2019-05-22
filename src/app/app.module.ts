@@ -4,10 +4,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { FormDdComponent } from './form-dd/form-dd.component';
+import { FormDdComponent } from 'app/form-dd/form-dd.component';
 
 import { StorageService } from './storage-service.service';
 import { DisplayComponent } from './display/display.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DisplayComponent } from './display/display.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    routing
   ],
   providers: [StorageService],
   bootstrap: [AppComponent]
