@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { NgFor } from '@angular/common';
+
+import {StorageService} from 'app/storage-service.service';
 
 @Component({
   selector: 'af-form',
@@ -14,7 +15,7 @@ export class FormDdComponent implements OnInit {
 
   myForm: FormGroup;
 
-  constructor() { }
+  constructor(private storageService : StorageService) { }
 
   ngOnInit() {
     this.myForm = new FormGroup({
@@ -31,7 +32,7 @@ export class FormDdComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.myForm.value);
+    this.storageService.save(this.myForm.value);
   }
 
 }

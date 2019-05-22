@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FormDdComponent } from './form-dd/form-dd.component';
 
+import { StorageService } from './storage-service.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,7 @@ import { FormDdComponent } from './form-dd/form-dd.component';
     HttpModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
