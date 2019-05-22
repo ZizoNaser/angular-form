@@ -2,17 +2,26 @@
     <div class="form-row" >
         <div class="col form-group">
           <label for="firstName">First Name</label>
-          <input type="text" class="form-control" placeholder="First name" id="firstName" formControlName="firstName">
+          <input type="text" class="form-control" placeholder="First name" id="firstName" formControlName="firstName" >
+          <small id="firstNamehelp" class="form-text text-danger" *ngIf="!myForm.get('firstName').valid && myForm.get('firstName').dirty">
+              *required
+            </small>
         </div>
         <div class="col">
           <label for="lastName">Last Name</label>
-          <input type="text" class="form-control" placeholder="Last name" id="lastName" formControlName="lastName">
+          <input type="text" class="form-control" placeholder="Last name" id="lastName" formControlName="lastName" >
+          <small id="lastNamehelp" class="form-text text-danger" *ngIf="!myForm.get('lastName').valid && myForm.get('lastName').dirty">
+              *required
+            </small>
         </div>
       </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail">Email</label>
-      <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="email">
+      <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="email" >
+      <small id="emailHelp" class="form-text text-danger" *ngIf="!myForm.get('email').valid && myForm.get('email').dirty">
+        Please Enter a Valid email
+      </small>
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Password</label>
@@ -38,21 +47,9 @@
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip" formControlName="zip">
+      <input type="number" class="form-control" id="inputZip" formControlName="zip">
     </div>
   </div>
-  <fieldset class="form-group">
-      <div class="row">
-        <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-        <div class="col-sm-10">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-            <label class="form-check-label" for="gridRadios1">
-              male
-            </label>
-          </div>
-        </div>
-      </div>
-    </fieldset>
+  
   <button type="submit" class="btn btn-dark" [disabled]="!myForm.valid">Submit</button>
 </form>
