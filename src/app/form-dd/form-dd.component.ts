@@ -25,7 +25,10 @@ export class FormDdComponent implements OnInit {
       'zip'      : new FormControl(),
       'gender'   : new FormControl(),
     });
-    
+  }
+
+  onSubmit(){
+    console.log(this.myForm);
   }
 
 }
